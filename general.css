@@ -1,0 +1,25 @@
+body {margin: 0;}
+a:link{	color: black; }
+nav.otherPage {
+	height: 8vh;
+	width: 100vw;
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+nav div{ width: 140px; }
+#HomePage{ flex-shrink: 2; }
+#Intro{flex-shrink: 2;}
+#Board{flex-shrink:1;}
+
+footer{
+ 	height: 40px;
+ 	background-color: black;
+ 	color:white;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ }
