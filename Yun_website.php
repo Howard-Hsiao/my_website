@@ -20,11 +20,13 @@
 </head>
 <body>
 <?php
-	require("navigator.php");
+	include_once("navigator.php");
 ?>
+<div class="Main_Container">
 <section></section>
-<footer>
-	<p>Welcome to Yun's website.</p>
-</footer>
+</div>
+<?php
+	include_once("footer.php");
+?>
 </body>
 </html>
