@@ -1,6 +1,6 @@
-<?php
-	include_once("set_counter.php");
-?>
+<!-- <?php
+	//include_once("set_counter.php");
+?> -->
 
 <!DOCTYPE html>
 <html>

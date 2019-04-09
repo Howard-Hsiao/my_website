@@ -1,5 +1,5 @@
 <?php
-	$conn=mysqli_connect("localhost", "Yun", "Star1999");
+	$conn=mysqli_connect("52.3.113.165", "root", "");
 	mysqli_select_db($conn, "message_board");
 	mysqli_query($conn, "set names utf8");
 	
