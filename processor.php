@@ -1,5 +1,5 @@
 <?php
-	$conn=mysqli_connect("52.3.113.165", "root", "");
+	$conn=mysqli_connect("localhost", "Yun", "Star1999");
 	mysqli_select_db($conn, "message_board");
 	mysqli_query($conn, "set names utf8");
 	
@@ -16,6 +16,6 @@
 	{
 		mysqli_query($conn, "INSERT INTO `message_board` (`Name`, `Subject`, `Content`, `Time`) VALUES ('{$Name}', '{$Subject}', '{$Content}', '{$Time}')");
 	}
-	header( 'Location: Yun_message_Board_show.php' );
+	header( 'Location: Yun_message_board_show.php' );
 	exit();
 ?>

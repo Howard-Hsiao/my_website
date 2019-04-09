@@ -1,6 +1,6 @@
-<!-- <?php
-	//include_once("set_counter.php");
-?> -->
+<?php
+	include_once("set_counter.php");
+?>
 
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,6 @@
 
     /* fetch associative array */
     $num = 0;
-    echo "<br><a href='Yun_message_board_input.php'>Write a message</a>";
     while ($row = mysqli_fetch_assoc($result))
     {	
     	echo "
