@@ -26,5 +26,25 @@ footer{
 
  div.Main_Container{
  	min-height: 92vh;
- 	background-color: green;
+ 	background-color: #cee9ff;
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: flex-start;
+ 	align-items: center;
  }
+
+table
+{
+	empty-cells: hide;
+	border-spacing: 0px;
+	background-color: aliceblue;
+}
+td
+{
+	padding: 10px;
+	border:1px solid #10375285;
+}
+td.THEAD
+{
+	font-weight: 600;
+}

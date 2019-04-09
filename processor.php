@@ -1,6 +1,6 @@
 <?php
 	$conn=mysqli_connect("localhost", "root", "Star1999");
-	mysqli_select_db($conn, "yun_website");
+	mysqli_select_db($conn, "message_board");
 	mysqli_query($conn, "set names utf8");
 	
 	if ($conn->connect_error) {
