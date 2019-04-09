@@ -13,7 +13,7 @@
 	if (!isset($_SESSION['entered']))
 	{
 		$_SESSION['entered'] = true;
-		$updateSession=mysqli_connect("localhost", "root", "Star1999");
+		$updateSession=mysqli_connect("localhost", "Yun", "Star1999");
 		mysqli_select_db($updateSession, "message_board");
 		mysqli_query($updateSession, "set names utf8");
 
