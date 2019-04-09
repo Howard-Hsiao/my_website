@@ -1,3 +1,7 @@
+<?php
+	include_once("set_counter.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,15 +21,15 @@
 
 <?php
 	include_once("connect.php");	
-	$query = "SELECT * FROM message_board ORDER by `Time` DESC";
+	$query = "SELECT * FROM message_board ORDER by `Time` ASC";
 
 	if ($result = mysqli_query($conn, $query)) {
 
     /* fetch associative array */
     $num = 0;
+    echo "<br><a href='Yun_message_Board_input.php'>Write a message</a>";
     while ($row = mysqli_fetch_assoc($result))
     {	
-
     	echo "
     		<br>
     		<table>
@@ -41,11 +45,12 @@
 					<td class='THEAD' colspan='2'>Content</td>
 				</tr>
 				<tr>
-					<td colspan='2'>{$row['Subject']}</td>
+					<td colspan='2'>{$row['Content']}</td>
 				</tr>
 			</table>";
 			$num++;
 	    }
+	    echo "<p><a href='Yun_message_Board_input.php'>Write a message</a></p>";
 	    /* free result set */
 	    mysqli_free_result($result);
 	}
@@ -65,7 +70,18 @@
 	}
 	window.alert(temp);
 </script> -->
-
+<table id='counter'>
+    <tr>
+        <td>You have visit this site:<?php echo $_COOKIE['counter'] ?> times</td>
+    </tr>
+    <tr>
+        <td>There are totally
+            <?php
+                echo $visit_num;
+            ?>
+         people visit my site!</td>
+    </tr>
+</table>
 </div>
 <?php
 	include_once("footer.php");

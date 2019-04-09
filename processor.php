@@ -8,15 +8,14 @@
 	} 
 	$data=mysqli_query($conn, "select * from message_board");
 
-	$Name='Yun';
+	$Name=$_POST["Name"];
 	$Subject=$_POST["Subject"];
 	$Content=$_POST["Content"];
 	$Time=date("Y:m:d H:i:s", time()+2000);//+2000 aims to set the time to Taiwanese one
-	if($_POST["Content"])
+	if($Content)
 	{
-		$a = mysqli_query($conn, "INSERT INTO `message_board` (`Name`, `Subject`, `Content`, `Time`) VALUES ('Yun', '{$Subject}', '{$Content}', '{$Time}')");
-		echo "{$a}";
+		mysqli_query($conn, "INSERT INTO `message_board` (`Name`, `Subject`, `Content`, `Time`) VALUES ('{$Name}', '{$Subject}', '{$Content}', '{$Time}')");
 	}
-
-	echo "{$Name}, {$Subject}, {$Content}, {$Time}";
+	header( 'Location: Yun_message_Board_show.php' );
+	exit();
 ?>

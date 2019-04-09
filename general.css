@@ -29,12 +29,14 @@ footer{
  	background-color: #cee9ff;
  	display: flex;
  	flex-direction: column;
- 	justify-content: flex-start;
+ 	justify-content: center;
  	align-items: center;
  }
 
 table
 {
+	width: 70vw;
+	color: black;
 	empty-cells: hide;
 	border-spacing: 0px;
 	background-color: aliceblue;
@@ -47,4 +49,12 @@ td
 td.THEAD
 {
 	font-weight: 600;
+}
+
+#counter
+{
+	border: 0;
+	background-color: #ffffffc7;
+	width: 280px;
+	align-self: flex-end;
 }

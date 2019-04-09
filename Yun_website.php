@@ -1,3 +1,7 @@
+<?php
+	include_once("set_counter.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,9 +16,17 @@
 			background-image: url(background.jpg);
 			background-size: 105%;
 			background-repeat: no-repeat;
-			background-position: 0% 0%
+			background-position: 0% 0%;
+			display: flex;
+			justify-content: flex-end;
 		}
-
+		#counter
+		{
+			border: 0;
+			background-color: #ffffffc7;
+			width: 280px;
+			align-self: flex-end;
+		}
 	</style>
 
 </head>
@@ -22,9 +34,20 @@
 <?php
 	include_once("navigator.php");
 ?>
-<div class="Main_Container">
-<section></section>
-</div>
+<section>
+	<table id='counter'>
+		<tr>
+			<td>You have visit this site:<?php echo $_COOKIE['counter'] ?> times</td>
+		</tr>
+		<tr>
+			<td>There are totally
+				<?php
+					echo $visit_num;
+				?>
+			 people visit my site!</td>
+		</tr>
+	</table>
+</section>
 <?php
 	include_once("footer.php");
 ?>
