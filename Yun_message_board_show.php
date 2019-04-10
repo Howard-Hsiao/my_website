@@ -29,22 +29,25 @@
     $num = 0;
     while ($row = mysqli_fetch_assoc($result))
     {	
+    	$Name=htmlentities($row['Name']);
+    	$Subject=htmlentities($row['Subject']);
+    	$Content=htmlentities($row['Content']);
     	echo "
     		<br>
     		<table>
 				<tr>
-					<td class='THEAD'>{$row['Name']}</td>
+					<td class='THEAD'>{$Name}</td>
 					<td class='THEAD'>{$row['Time']}</td>
 				</tr>
 				<tr>
 					<td class='THEAD'>Subject</td>
-					<td id='Subject+{$num}' colspan='2'>{$row['Subject']}</td>
+					<td id='Subject+{$num}' colspan='2'>{$Subject}</td>
 				</tr>
 				<tr>
 					<td class='THEAD' colspan='2'>Content</td>
 				</tr>
 				<tr>
-					<td colspan='2'>{$row['Content']}</td>
+					<td colspan='2'>{$Content}</td>
 				</tr>
 			</table>";
 			$num++;
